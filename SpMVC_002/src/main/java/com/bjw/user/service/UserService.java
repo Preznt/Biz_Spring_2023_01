@@ -7,7 +7,7 @@ public class UserService {
 	/**
 	 * UserVO type 의 user 객체에 저장된 데이터를
 	 * return 하는 method
-	 *  
+	 *    
 	 * @return UserVO
 	 */
 	public UserVO getUser() {
