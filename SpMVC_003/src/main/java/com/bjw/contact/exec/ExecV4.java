@@ -13,8 +13,8 @@ public class ExecV4 {
 	
 	/**
 	 * @param num1
-	 * 정수형 매개변수(parameter, argument)를 갖는 method
-	 * 이 method 를 호출하려면 반드시 정수값을 함께 전달해야 한다
+	 * 정수형 매개변수(parameter, argument)를 갖는 
+	 * method 를 호출하려면 반드시 정수값을 함께 전달해야 한다
 	 * 매개변수에 정수값을 주입해야 한다
 	 */
 	private static void num(int num1) {
