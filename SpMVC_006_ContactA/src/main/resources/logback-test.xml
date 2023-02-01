@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration scan="true" scanPeriod="3 seconds">
+
+   <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <charset>UTF-8</charset>
+            <Pattern>  [%-5level] %msg - %C{5}%n</Pattern>
+        </encoder>
+    </appender>
+	<!-- ERROR INFO WARNIG DEBUG 이 순서대로 여기서 level를 
+	DEBUG로 설정하면 그 위에 것들은 나타나게 된다
+	additivity="false" : 로그를 한번만 보여라  
+	-->
+    <logger name="org.springframework" level="INFO" additivity="false"/>
+    <logger name="com.bjw.contact" level="DEBUG"  additivity="false">
+        <appender-ref ref="STDOUT"/>
+    </logger>
+
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+</configuration>

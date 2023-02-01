@@ -1,0 +1,27 @@
+package com.bjw.contact.service;
+
+import java.util.List;
+
+import com.bjw.contact.models.UserDto;
+
+/**
+ * Generic class
+ * interface 들의 prototype
+ * CRUD 를 구현하기 위하여사용하는 여러 interface 들이 있는데 이러한 interface 들에는
+ * 구현되지 않은 prototype 형태의 method 들이 중복되어 정의 된다
+ * 어차피 기본 CRUD 보통 같은 이름의 method 를 사용한다
+ * 객체지향에서는 중복된 코드는 최소한으로 유지하는 것이 원칙이다
+ * 이러한 원칙을 지키며 객체지향(특히 자바) 코드의 장점을 활용하는 것
+ * 
+ * @param isbn
+ * @return
+ */
+public interface GenericService<DTO,PK> {
+	
+	public List<UserDto> selectAll();
+	public UserDto findByIsbn(Integer id);
+	public int insert(UserDto dto);
+	public int update(UserDto dto);
+	public int delete(String isbn);
+}
+}
